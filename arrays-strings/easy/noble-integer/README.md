@@ -1,29 +1,26 @@
 # Noble Integer
 
-- **Problem link:** [Noble Integer — InterviewBit](https://www.interviewbit.com/problems/noble-integer/)
-- **Topic:** Arrays, sorting, duplicate handling
-- **Difficulty:** Easy
-- **Status:** Practice
-- **Language:** JavaScript
+- Problem: [Noble Integer — InterviewBit](https://www.interviewbit.com/problems/noble-integer/)
+- Topic: Arrays and strings
+- Difficulty: Easy
+- Status: Brute-force idea drafted; plan in progress
+- Language: JavaScript
 
-## Problem summary
+## Problem in my words
 
-Given an integer array, return `1` if there is a value `p` in the array for which exactly `p` elements are strictly greater than `p`. Otherwise return `-1`.
+Return 1 if an array value p has exactly p array elements strictly greater than it. Otherwise return -1.
 
-## Example
+For the first example, p = 2 has two greater elements, so the answer is 1. In the second example, no value satisfies the condition, so the answer is -1.
 
-For `[3, 2, 1, 3]`, the answer is `1`: the value `2` has two array elements greater than it.
+## My current approach
 
-For `[1, 1, 3, 3]`, the answer is `-1`.
+Try every value as p. For each candidate, count all array values strictly greater than p. If that count equals p, return 1. If no candidate works, return -1.
 
-## Approaches
+- Brute-force time: O(n²)
+- Extra space: O(1)
 
-- [Brute force](brute-force.md): try every array value and count all greater values. `O(n²)` time, `O(1)` extra space.
-- [Plan and optimized approach](plan.md): sort descending and inspect the first position of each distinct value. `O(n log n)` time, `O(n)` extra space because the solution copies the input before sorting.
+See [my brute-force notes](brute-force.md) and [my plan](plan.md).
 
-## Files
+## Next step
 
-- [Brute-force notes](brute-force.md)
-- [Plan and interview explanation](plan.md)
-- [JavaScript solution](solution.js)
-- [Tests](solution.test.js)
+I will write and attempt my own final approach before adding any solution code here. Suggestions in the notes are prompts for my reasoning, not a completed solution.
