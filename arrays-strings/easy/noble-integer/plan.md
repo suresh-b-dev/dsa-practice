@@ -11,14 +11,14 @@ This approach is correct when the array is sorted in descending order and the in
 
 Skipping duplicates is essential. At the first occurrence of a distinct value, every preceding value is strictly greater, so the index equals the number of values greater than the current value. Equal duplicates must not be counted as greater.
 
-For the first position there is no previous value to compare with; treat it as the first occurrence and perform the equality check.
+For the first position there is no previous value to compare with; treat it as the first occurrence and perform the equality check. The loop must inspect every position, including the final one.
 
 ## Complexity
 
 Sorting takes O(n log n) time and the scan takes O(n), so the overall time is O(n log n).
 
-If I sort the original array, the input will be reordered. If I keep the original unchanged by making a copy, that copy uses O(n) extra space. Extra space used internally by a language's sort operation can vary.
+The implementation sorts the original array in place, so it reorders the input. Additional space used internally by the language's sort operation can vary.
 
-## Next step
+## Implementation status
 
-Write my own implementation from this plan, then check it against both examples and cases with duplicate values. Add solution code only after my implementation has been reviewed and I confirm the final version.
+I supplied the solution. Its core sorting, duplicate-skip, and value-to-index comparison follow this plan. The function is named nobleInteger and has comments explaining the duplicate handling. See the test instructions in README.md.
