@@ -1,10 +1,16 @@
 # Easy — Arrays and Strings
 
-Add one folder per problem in this section. For example:
+Problems in this section:
+
+- [Noble Integer](noble-integer/README.md) — sorting, duplicate handling
+
+Add each new problem as its own folder. Use lowercase kebab-case names and keep its notes, solution, and tests together.
+
+Example:
 
 ```text
 easy/
-└── contains-duplicate/
+└── problem-name/
     ├── README.md
     ├── brute-force.md
     ├── plan.md
