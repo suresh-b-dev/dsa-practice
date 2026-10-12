@@ -5,27 +5,17 @@
 - Difficulty: Easy
 - Status: Solution and tests added
 
-## My solution approach
-
-1. Reduce K using the array length so rotations beyond a full cycle are removed.
-2. Reverse the entire array.
-3. Reverse the first section, from index 0 through rotate - 1.
-4. Reverse the remaining section, from index rotate through the final index.
-5. Return the rotated array.
-
-The solution modifies the input array in place.
-
-## Complexity
-
-- **Time:** O(N), because the solution performs three reversals.
-- **Extra space:** O(1), using swaps and one temporary value.
-
 ## Files
 
+- [My plan](plan.md)
 - [Initial repeated-rotation approach](brute-force.md)
 - [Example test cases](test-cases.md)
 - [JavaScript solution with comments](solution.js)
 - [Automated tests](solution.test.js)
+
+## Complexity
+
+The reversal solution runs in O(N) time and uses O(1) extra space. It modifies the input array in place.
 
 ## Run the tests
 
