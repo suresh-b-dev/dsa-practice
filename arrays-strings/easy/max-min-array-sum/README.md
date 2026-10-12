@@ -3,13 +3,51 @@
 - Problem: Given an integer array, return the sum of its maximum and minimum values.
 - Topic: Arrays
 - Difficulty: Easy
-- Status: Approach documented; solution pending
+- Status: Solution and tests added
 
 ## My approach
 
-See [my single-pass approach](brute-force.md). I will add my own solution after I finish it.
+Initialize the minimum and maximum from the first array value. Scan the remaining values once, updating the minimum or maximum when needed, then return their sum.
 
-## Example checks
+- **Time:** O(N)
+- **Extra space:** O(1)
 
-- For [-2, 1, -4, 5, 3], the minimum is -4 and the maximum is 5, so the result is 1.
-- For [1, 3, 4, 1], the minimum is 1 and the maximum is 4, so the result is 5.
+The function keeps the empty-array behavior from my submitted version and returns 0 for an empty array. The problem constraints guarantee a non-empty array, so this is defensive behavior.
+
+## Files
+
+- [My approach notes](brute-force.md)
+- [JavaScript solution with comments](solution.js)
+- [Test cases](solution.test.js)
+
+## Run the tests
+
+From the repository root:
+
+```sh
+node --test arrays-strings/easy/max-min-array-sum/solution.test.js
+```
+
+From this problem's folder:
+
+```sh
+node --test solution.test.js
+```
+
+## Run a single test
+
+Match part of a test's name:
+
+```sh
+node --test --test-name-pattern="only negative values" arrays-strings/easy/max-min-array-sum/solution.test.js
+```
+
+## Try a different input
+
+From the repository root:
+
+```sh
+node -e "const min_max = require('./arrays-strings/easy/max-min-array-sum/solution'); console.log(min_max([8, -3, 2]));"
+```
+
+For a repeatable check, add another case to solution.test.js with the input and expected sum, then run the test command again.
