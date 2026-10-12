@@ -1,21 +1,24 @@
 # My plan
 
-## Current status
+1. Sort the array in descending order.
+2. If the current value is the same as the previous value, continue to the next position.
+3. Otherwise, compare the current value with its index. If they are equal, return 1.
+4. If the loop finishes without a match, return -1.
 
-TODO — I have written the brute-force idea. I will attempt an improved approach independently before filling this section.
+## Review of my plan
 
-## Questions to answer while planning
+This approach is correct when the array is sorted in descending order and the index starts at zero.
 
-- How can I avoid scanning the whole array for every candidate?
-- How should duplicate values be handled when the condition says strictly greater?
-- What should the algorithm return when the candidate is negative?
-- Does my chosen approach change the input array?
-- What are the time and extra-space costs?
+Skipping duplicates is essential. At the first occurrence of a distinct value, every preceding value is strictly greater, so the index equals the number of values greater than the current value. Equal duplicates must not be counted as greater.
 
-## Interview explanation draft
+For the first position there is no previous value to compare with; treat it as the first occurrence and perform the equality check.
 
-TODO — After working out my own approach, explain the brute-force idea, why it may be slow for the given input size, the key observation behind my improvement, duplicate handling, correctness, and complexity.
+## Complexity
 
-## Review notes
+Sorting takes O(n log n) time and the scan takes O(n), so the overall time is O(n log n).
 
-Once I add my own final attempt, review it for correctness and edge cases before adding any solution code to this folder.
+If I sort the original array, the input will be reordered. If I keep the original unchanged by making a copy, that copy uses O(n) extra space. Extra space used internally by a language's sort operation can vary.
+
+## Next step
+
+Write my own implementation from this plan, then check it against both examples and cases with duplicate values. Add solution code only after my implementation has been reviewed and I confirm the final version.
