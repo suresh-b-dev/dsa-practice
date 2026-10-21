@@ -2,10 +2,10 @@
 
 1. Create an array of A zeros, one for each beggar.
 2. Process each donation [L, R, P] in B.
-3. For that donation, add P to each beggar from L through R, inclusive.
+3. For that donation, add P to each beggar from zero-based index L through zero-based index R, inclusive.
 4. Return the resulting amounts.
 
-The problem uses 1-based beggar positions, while a JavaScript array uses 0-based indexes. Therefore, the first affected array index is L - 1 and the last affected index is R - 1.
+In this repository's examples and notes, L and R are zero-based indexes. The original problem statement gives one-based positions, so subtract 1 from both endpoints when converting an original input.
 
 ## Complexity
 
