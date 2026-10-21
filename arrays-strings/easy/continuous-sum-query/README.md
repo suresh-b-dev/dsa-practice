@@ -2,20 +2,27 @@
 
 ## Problem
 
-There are A beggars in a row, each starting with zero coins. Each donation is described by [L, R, P] and adds P coins to every beggar from L to R, inclusive. Return the final amount for each beggar.
+There are A beggars in a row, each starting with zero coins. Each donation is described by [L, R, P] and adds P coins to every beggar from index L through index R, inclusive. Return the final amount for each beggar.
 
-The donation positions are 1-based. The returned array is 0-based.
+**Index convention in this repository:** donation ranges are zero-based and inclusive. The original problem statement uses one-based positions; subtract 1 from both endpoints when converting an original input to this repository's convention.
 
-## Constraints
+## Constraints using zero-based ranges
 
 - 1 <= A <= 200,000
-- 1 <= L <= R <= A
+- 0 <= L <= R < A
 - 1 <= P <= 1,000
 - 0 <= B.length <= 100,000
 
+## Example
+
+A = 5  
+B = [[0, 1, 10], [1, 2, 20], [1, 4, 25]]
+
+Expected result: [10, 55, 45, 25, 25]
+
 ## My brute-force approach
 
-Create an array of A zeros. For every donation, visit each beggar in its inclusive range and add the donation amount. See [brute-force notes](brute-force.md) for the full steps and complexity.
+Create an array of A zeros. For every donation, visit each beggar in its inclusive zero-based range and add the donation amount. See [brute-force notes](brute-force.md) for the full steps and complexity.
 
 ## My plan
 
